@@ -38,7 +38,7 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
             <div key={`${level}-${index}`} className={groupClass}>
               {levelInfo.items.map(item => {
                 const isMatch = regex && RegExp(`^${regex}$`).test(item.text);
-                const isLevelMatch = isMatch && level - 1 === index;
+                const isLevelMatch = isMatch && level - 1 === index && newLevel;
                 const isFalseMatch = isMatch && !isLevelMatch && level === index && !newLevel;
                 const itemClass = classNames('regex-item', { 'is-match': isLevelMatch, 'is-false-match': isFalseMatch });
 
