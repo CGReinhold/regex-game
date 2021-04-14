@@ -31,8 +31,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
+  max-width: 20%;
+  align-self: stretch;
 }
 
 .regex-character {
@@ -63,6 +65,7 @@
 }
 
 .regex-item {
+  flex: 1;
   border: 2px solid #D9927E;
   background-color: #FFC9B9;
   border-radius: 5px;
@@ -70,7 +73,11 @@
   align-self: stretch;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
+  pointer-events: none;
 }
 
 .regex-item.is-match {
