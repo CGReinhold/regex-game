@@ -9,7 +9,7 @@ export const LEVEL4: ILevel = {
       </p>
       <p>
         The repetition meta characters can match not only the preciding character but also a group of characters.
-        To create a group of characters you can use parenthesis <code>(xyz)</code> to describe a group of characters, or a sub regex.
+        To create a capture group of characters you can use parenthesis <code>(xyz)</code> to describe a group of characters.
       </p>
       <p>
         You can use also the pipe character (<code>|</code>) to define alternation. Alternation is like an OR statement between multiple expressions.

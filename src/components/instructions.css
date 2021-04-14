@@ -2,9 +2,19 @@
   padding: 10px 20px;
 }
 
+.instructions .info {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 50px;
+}
+
 .instructions code {
   border: 1px dotted black;
   padding: 0 2px;
+}
+
+.instructions .buttons {
+  display: flex;
 }
 
 .instructions form {
@@ -27,13 +37,38 @@
   opacity: 0.2;
 }
 
-.instructions form button {
+.instructions form .buttons button {
   border: none;
   border-radius: 10px;
-  padding: 10px 20px;
-  width: 200px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #28774A;
   color: white;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.instructions form .buttons button:disabled {
+  cursor: initial;
+  opacity: 0.7;
+}
+
+.instructions form .change-level {
+  padding: 10px 20px;
+  font-size: 26px;
+}
+
+.instructions form .submit {
+  padding: 10px 20px;
+  width: 200px;
   font-size: 22px;
+}
+
+.instructions form .answer {
+  border: none;
+  background-color: transparent;
+  color: #28774A;
+  font-size: 16px;
+  margin-top: 25px;
+  cursor: pointer;
+  outline: none;
 }

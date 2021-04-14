@@ -7,7 +7,6 @@
 }
 
 .game .box {
-  flex: 1;
   background-color: #A9D1BC;
   margin: 10px;
   border-radius: 5px;
@@ -15,4 +14,12 @@
   overflow: hidden;
   padding: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.instruction-box {
+  flex: 3;
+}
+
+.game-box {
+  flex: 4;
 }
