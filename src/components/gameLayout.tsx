@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import './gameLayout.css'
 import character from '../assets/character.png'
-import ladder from '../assets/ladder.png'
+import ladder from '../assets/footprint.png'
 import { LEVELS } from '../constants/levels';
 import { match } from '../utils/regex';
 
@@ -18,13 +18,13 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
     return `calc(${20 * horizontalIndex}%)`;
   }, [level]);
 
-  const [top, setTop] = useState<string>(`calc(10% - ${(level) * 255}px)`);
+  const [top, setTop] = useState<string>(`calc(10% - ${(level) * 259}px + 60px)`);
   const [left, setLeft] = useState<string>(getLeftPosition());
   const [newLevel, setNewLevel] = useState<boolean>(false);
 
   useEffect(() => {
     if (level > 0) {
-      setTop(`calc(10% - ${(level) * 255}px)`);
+      setTop(`calc(10% - ${(level) * 259}px + 60px)`);
       setLeft(getLeftPosition());
       setNewLevel(true);
     }
@@ -65,11 +65,11 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
             </div>
           );
         })}
-        <div className="regex-column">
+        <div>
           {level === LEVELS.length && (
             <span className="win-label">You won</span>
           )}
-          <div className="regex-item"></div>
+          <div className="regex-floor"></div>
         </div>
       </div>
 

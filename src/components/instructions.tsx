@@ -40,7 +40,7 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, onSubmit, 
 
   return (
     <div className="instructions">
-      <h3>Regex Raid</h3>
+      <h1>Regex Raid</h1>
       <div>
         {description ? (
           <>
@@ -52,10 +52,12 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, onSubmit, 
         )}
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Your regex" value={regex} onChange={handleRegexChange} />
+        <input type="text" placeholder="Your regex..." value={regex} onChange={handleRegexChange} />
         <div className="buttons">
           <button disabled={level <= 0} className="change-level" type="button" onClick={handlePrevious}>‹</button>
-          <button className="submit" type="submit">Try!</button>
+          <div className="submit">
+            <button type="submit">Try!</button>
+          </div>
           <button disabled={level >= LEVELS.length} className="change-level" type="button" onClick={handleNext}>›</button>
         </div>
         {description && (

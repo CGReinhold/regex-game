@@ -1,5 +1,6 @@
 .instructions {
-  padding: 10px 20px;
+  padding: 0 20px;
+  overflow-y: auto;
 }
 
 .instructions .info {
@@ -15,6 +16,7 @@
 
 .instructions .buttons {
   display: flex;
+  margin-top: 50px;
 }
 
 .instructions form {
@@ -25,12 +27,11 @@
 
 .instructions form input {
   border: none;
-  border-radius: 10px;
   padding: 10px 20px;
   margin: 15px 0;
   font-size: 22px;
   outline: none;
-  box-shadow: inset rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 4px solid black;
 }
 
 .instructions form input::placeholder {
@@ -39,36 +40,60 @@
 
 .instructions form .buttons button {
   border: none;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: #28774A;
-  color: white;
+  border: 4px solid black;
+  color: black;
   cursor: pointer;
-  margin: 0 20px;
 }
 
 .instructions form .buttons button:disabled {
   cursor: initial;
-  opacity: 0.7;
+  opacity: 0.2;
 }
 
 .instructions form .change-level {
   padding: 10px 20px;
   font-size: 26px;
+  margin: 0 40px;
 }
 
 .instructions form .submit {
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
+  background: linear-gradient( -45deg, white, white 25%, black 25%, black 50%, white 50%, white 75%, black 75%, black 100% );
+  background-size: 40px 40px;
+  animation: scrolling-gradient 2s linear infinite;
+  border: 4px solid black;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.instructions form .submit button {
+  background-color: white;
+  color: black;
+  flex: 1;
+  border-radius: 0;
   font-size: 22px;
+  padding: 5px 0;
 }
 
 .instructions form .answer {
   border: none;
   background-color: transparent;
-  color: #28774A;
   font-size: 16px;
+  border: 2px dashed black;
   margin-top: 25px;
   cursor: pointer;
   outline: none;
+  padding: 5px;
+}
+
+@keyframes scrolling-gradient {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 40px;
+  }
 }

@@ -2,22 +2,26 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #76B290;
+  background-color: white;
+  color: black;
+  background-image: -webkit-repeating-radial-gradient( center center, black, black 1px, white 1px, white 100% );
+  background-size: 8px 8px;
   height: 100vh;
 }
 
 .game .box {
-  background-color: #A9D1BC;
+  background-color: white;
+  border: 4px black solid;
+  box-shadow: 10px 8px 0px black;
   margin: 10px;
-  border-radius: 5px;
   align-self: stretch;
   overflow: hidden;
   padding: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .instruction-box {
   flex: 3;
+  overflow-y: auto !important;
 }
 
 .game-box {
