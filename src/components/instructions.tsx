@@ -40,7 +40,7 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, onSubmit, 
 
   return (
     <div className="instructions">
-      <h3>Regex Game</h3>
+      <h3>Regex Raid</h3>
       <div>
         {description ? (
           <>

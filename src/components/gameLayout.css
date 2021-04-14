@@ -38,7 +38,7 @@
 .regex-character {
   height: 60px;
   position: absolute;
-  top: calc(50% - 60px);
+  top: calc(10% - 60px);
   transition: left 1s;
   width: 20%;
   display: flex;

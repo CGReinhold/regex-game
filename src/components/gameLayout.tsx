@@ -18,13 +18,13 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
     return `calc(${20 * horizontalIndex}%)`;
   }, [level]);
 
-  const [top, setTop] = useState<string>(`calc(50% - ${(level) * 255}px)`);
+  const [top, setTop] = useState<string>(`calc(10% - ${(level) * 255}px)`);
   const [left, setLeft] = useState<string>(getLeftPosition());
   const [newLevel, setNewLevel] = useState<boolean>(false);
 
   useEffect(() => {
     if (level > 0) {
-      setTop(`calc(50% - ${(level) * 255}px)`);
+      setTop(`calc(10% - ${(level) * 255}px)`);
       setLeft(getLeftPosition());
       setNewLevel(true);
     }
