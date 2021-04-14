@@ -32,7 +32,7 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, onSubmit, 
         {description}
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="regex" value={regex} onChange={handleRegexChange} />
+        <input type="text" placeholder="your regex" value={regex} onChange={handleRegexChange} />
         <button type="submit">Try!</button>
       </form>
     </div>

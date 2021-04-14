@@ -11,15 +11,20 @@ interface GameLayoutProps {
 }
 
 const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
-  const [top, setTop] = useState<string>(`calc(50% - ${(level) * 150}px)`);
-  const [left, setLeft] = useState<string>(`calc(40%)`);
+  const getLeftPosition = () => {
+    if (level === 0) return `calc(40%)`;
+    const horizontalIndex = LEVELS[level - 1].items.findIndex(item => item.isRight);
+    return `calc(${20 * horizontalIndex}%)`;
+  }
+
+  const [top, setTop] = useState<string>(`calc(50% - ${(level) * 255}px)`);
+  const [left, setLeft] = useState<string>(getLeftPosition());
   const [newLevel, setNewLevel] = useState<boolean>(false);
 
   useEffect(() => {
     if (level > 0) {
-      setTop(`calc(50% - ${(level) * 165}px)`);
-      const horizontalIndex = LEVELS[level - 1].items.findIndex(item => item.isRight);
-      setLeft(`calc(${20 * horizontalIndex}%)`);
+      setTop(`calc(50% - ${(level) * 255}px)`);
+      setLeft(getLeftPosition());
       setNewLevel(true);
     }
   }, [level]);
@@ -59,6 +64,12 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
             </div>
           );
         })}
+        <div className="regex-column">
+          {level === LEVELS.length && (
+            <span className="win-label">You won</span>
+          )}
+          <div className="regex-item"></div>
+        </div>
       </div>
 
       <div className="regex-character" style={{ left }}>

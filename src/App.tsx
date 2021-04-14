@@ -5,7 +5,7 @@ import LevelInstructions from './components/instructions';
 import { LEVELS } from './constants/levels';
 import { useLevel } from './hooks/useLevel';
 
-const LAST_LEVEL = LEVELS.length - 1;
+const LAST_LEVEL = LEVELS.length;
 
 const App = () => {
   const [level, setLevel] = useState<number>(0);
@@ -20,9 +20,7 @@ const App = () => {
     const isRegexRight = rightTexts.filter(text => RegExp(`^${regex}$`).test(text)).length === rightTexts.length && rightCount === rightTexts.length;
 
     if (isRegexRight) {
-      if (level === LAST_LEVEL) {
-        //TODO: game finished/won
-      } else {
+      if (level < LAST_LEVEL) {
         setTimeout(() => {
           setLevel(current => current + 1);
         }, 10)

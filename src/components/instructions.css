@@ -20,6 +20,7 @@
   margin: 15px 0;
   font-size: 22px;
   outline: none;
+  box-shadow: inset rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .instructions form input::placeholder {
@@ -31,4 +32,8 @@
   border-radius: 10px;
   padding: 10px 20px;
   width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #28774A;
+  color: white;
+  font-size: 22px;
 }

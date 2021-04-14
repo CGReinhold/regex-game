@@ -2,16 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #2C6E49;
+  background-color: #76B290;
   height: 100vh;
 }
 
 .game .box {
   flex: 1;
-  background-color: #4C956C;
+  background-color: #A9D1BC;
   margin: 10px;
   border-radius: 5px;
   align-self: stretch;
   overflow: hidden;
   padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
