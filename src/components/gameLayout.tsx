@@ -66,12 +66,13 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
           );
         })}
         <div>
-          {level === LEVELS.length && (
-            <span className="win-label">You won</span>
-          )}
           <div className="regex-floor"></div>
         </div>
       </div>
+
+      {level === LEVELS.length && (
+        <span className="win-label">You won!</span>
+      )}
 
       <div className="regex-character" style={{ left }}>
         <img src={character} alt="character" />

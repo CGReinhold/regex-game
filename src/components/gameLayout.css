@@ -58,9 +58,14 @@
 
 .win-label {
   position: absolute;
-  top: -65px;
-  font-size: 26px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  font-size: 72px;
   font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 4px black;
 }
 
 .regex-item {
