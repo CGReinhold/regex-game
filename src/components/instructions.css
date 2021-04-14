@@ -60,7 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 150px;
   background: linear-gradient( -45deg, white, white 25%, black 25%, black 50%, white 50%, white 75%, black 75%, black 100% );
   background-size: 40px 40px;
   animation: scrolling-gradient 2s linear infinite;
