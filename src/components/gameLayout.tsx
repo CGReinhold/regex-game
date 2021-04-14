@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import './gameLayout.css'
 import character from '../assets/character.png'
@@ -12,11 +12,11 @@ interface GameLayoutProps {
 }
 
 const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
-  const getLeftPosition = () => {
+  const getLeftPosition = useCallback(() => {
     if (level === 0) return `calc(40%)`;
     const horizontalIndex = LEVELS[level - 1].items.findIndex(item => item.isRight);
     return `calc(${20 * horizontalIndex}%)`;
-  }
+  }, [level]);
 
   const [top, setTop] = useState<string>(`calc(50% - ${(level) * 255}px)`);
   const [left, setLeft] = useState<string>(getLeftPosition());
@@ -28,7 +28,7 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
       setLeft(getLeftPosition());
       setNewLevel(true);
     }
-  }, [level]);
+  }, [level, getLeftPosition]);
 
   useEffect(() => {
     setNewLevel(false);
