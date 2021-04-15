@@ -89,9 +89,26 @@
   padding: 5px;
 }
 
+.mobile {
+  opacity: 0.6;
+  margin: 0 0 35px;
+}
+
 .try-again {
   color: #860204;
   font-weight: bold;
+}
+
+.links {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a {
+  margin: 0 10px;
+  color: black;
 }
 
 @keyframes scrolling-gradient {

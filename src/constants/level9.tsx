@@ -34,4 +34,5 @@ export const LEVEL9: ILevel = {
     },
   ],
   solution: '\\W+\\w+',
+  shouldInclude: ['\\w'],
 };

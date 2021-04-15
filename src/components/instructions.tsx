@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { isMobile } from "react-device-detect";
 import { LEVELS } from '../constants/levels';
 import { useLevel } from '../hooks/useLevel';
 import './instructions.css';
@@ -43,6 +44,11 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
     <div className="instructions">
       <h1>Regex Raid</h1>
       <div>
+        {isMobile && (
+          <p className="mobile">
+            This app may not work properly in mobile devices. Try playing it on desktop for a better experience.
+          </p>
+        )}
         {description ? (
           <>
             {description}
@@ -70,6 +76,11 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
           <button className="answer" type="button" onClick={handleGetAnswer}>Give me the solution!</button>
         )}
       </form>
+      <div className="links">
+        <a href="https://cgreinhold.dev">cgreinhold.dev</a>
+        •
+        <a href="https://github.com/CGReinhold/regex-game">Github</a>
+      </div>
     </div>
   );
 }
