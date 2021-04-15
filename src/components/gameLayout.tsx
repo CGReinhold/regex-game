@@ -23,9 +23,13 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
   const [left, setLeft] = useState<string>(getLeftPosition());
   const [newLevel, setNewLevel] = useState<boolean>(false);
   const [faceRight, setFaceRight] = useState<boolean>(true);
+  const lineRefs = React.useRef<any[]>([]);
 
   useEffect(() => {
-    setTop(`calc(10% - ${(level) * 259}px + 60px)`);
+    const previousLevels = lineRefs.current.slice(0, level);
+    const heights = previousLevels.reduce((acc, item) => acc + item.getBoundingClientRect().height, 0);
+    const topCalc = `calc(120px - ${heights}px)`;
+    setTop(topCalc);
     setLeft(getLeftPosition());
     setNewLevel(true);
     const previousRightIndex = level === 0 ? 0 : LEVELS[level - 1].items.findIndex(i => i.isRight);
@@ -48,7 +52,7 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
           const groupClass = classNames('item-group', { 'fade': level !== index });
 
           return (
-            <div key={`${level}-${index}`} className={groupClass}>
+            <div key={`${level}-${index}`} ref={el => lineRefs.current[index] = el} className={groupClass}>
               {levelInfo.items.map(item => {
                 const isMatch = regex && match(regex, item.text, levelInfo.isNotPerfectMatch);
                 const isLevelMatch = isMatch && level - 1 === index && newLevel;
