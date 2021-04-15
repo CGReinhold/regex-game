@@ -30,4 +30,5 @@ export const LEVEL7: ILevel = {
     },
   ],
   solution: '[0-9]+\\+[0-9]+',
+  shouldInclude: ['\\'],
 };

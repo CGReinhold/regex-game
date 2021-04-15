@@ -89,6 +89,11 @@
   padding: 5px;
 }
 
+.try-again {
+  color: #860204;
+  font-weight: bold;
+}
+
 @keyframes scrolling-gradient {
   0% {
     background-position: 0;

@@ -39,4 +39,5 @@ export const LEVEL4: ILevel = {
     },
   ],
   solution: '(.a)+@(gmail|mymail).com',
+  shouldInclude: ['(', ')', '+', '|'],
 };

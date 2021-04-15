@@ -34,4 +34,5 @@ export const LEVEL5: ILevel = {
     },
   ],
   solution: '[A-Z]{3}-[0-9]{3}',
+  shouldInclude: ['[', ']'],
 };

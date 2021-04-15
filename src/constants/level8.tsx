@@ -37,4 +37,5 @@ export const LEVEL8: ILevel = {
   ],
   solution: '^Cool',
   isNotPerfectMatch: true,
+  shouldInclude: ['^'],
 };

@@ -31,4 +31,5 @@ export const LEVEL10: ILevel = {
     },
   ],
   solution: '\\D?\\d+\\D?',
+  shouldInclude: ['\\d'],
 };

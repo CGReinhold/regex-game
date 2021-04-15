@@ -7,9 +7,10 @@ interface LevelInstructionsProps {
   level: number;
   onSubmit(regex: string): void;
   onChangeLevel(newLevel: number): void;
+  resultShouldInclude: boolean;
 }
 
-const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, onSubmit, onChangeLevel }) => {
+const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShouldInclude, onSubmit, onChangeLevel }) => {
   const [regex, setRegex] = useState<string>('');
   const { description, solution } = useLevel(level);
   
@@ -49,6 +50,11 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, onSubmit, 
           </>
         ) : (
           <p>Congratulations, you finished the regex game!</p>
+        )}
+        {resultShouldInclude && (
+          <p className="try-again">
+            You found a perfect solution, but try using something you learned on this level instead.
+          </p>
         )}
       </div>
       <form onSubmit={handleSubmit}>

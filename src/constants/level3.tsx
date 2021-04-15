@@ -34,4 +34,5 @@ export const LEVEL3: ILevel = {
     },
   ],
   solution: 'My .*games?',
+  shouldInclude: ['*', '?'],
 };

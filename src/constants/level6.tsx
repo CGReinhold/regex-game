@@ -29,4 +29,5 @@ export const LEVEL6: ILevel = {
     },
   ],
   solution: '.+ [^lb]ed',
+  shouldInclude: ['[^'],
 };

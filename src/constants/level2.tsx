@@ -38,4 +38,5 @@ export const LEVEL2: ILevel = {
     },
   ],
   solution: '.{5}',
+  shouldInclude: ['.', '{', '}'],
 };

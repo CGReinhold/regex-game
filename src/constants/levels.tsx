@@ -19,6 +19,7 @@ export interface ILevel {
   items: ILevelItem[];
   solution: string;
   isNotPerfectMatch?: boolean;
+  shouldInclude?: string[];
 }
 
 export const LEVELS: ILevel[] = [
