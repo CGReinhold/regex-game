@@ -25,17 +25,33 @@
   align-items: center;
 }
 
-.instructions form input {
-  border: none;
+.instructions form .input {
   padding: 10px 20px;
   margin: 15px 0;
-  font-size: 22px;
-  outline: none;
   border: 4px solid black;
 }
 
 .instructions form input::placeholder {
   opacity: 0.2;
+}
+
+.instructions form .input.exact::before {
+  content: '^';
+  font-size: 26px;
+  opacity: 0.6;
+}
+
+.instructions form .input.exact::after {
+  content: '$';
+  font-size: 22px;
+  opacity: 0.6;
+}
+
+.instructions form input {
+  border: none;
+  font-size: 22px;
+  outline: none;
+  margin: 0 4px;
 }
 
 .instructions form .buttons button {

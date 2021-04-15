@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { isMobile } from "react-device-detect";
 import { LEVELS } from '../constants/levels';
@@ -13,7 +14,7 @@ interface LevelInstructionsProps {
 
 const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShouldInclude, onSubmit, onChangeLevel }) => {
   const [regex, setRegex] = useState<string>('');
-  const { description, solution } = useLevel(level);
+  const { description, solution, isNotPerfectMatch } = useLevel(level);
   
   const handleRegexChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRegex(event.target.value)
@@ -29,10 +30,12 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
   };
 
   const handleNext = () => {
+    onSubmit('');
     onChangeLevel(level + 1);
   }
 
   const handlePrevious = () => {
+    onSubmit('');
     onChangeLevel(level - 1);
   }
 
@@ -64,7 +67,9 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
         )}
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Your regex..." value={regex} onChange={handleRegexChange} />
+        <div className={classNames('input', { exact: !isNotPerfectMatch})}>
+          <input type="text" placeholder="Your regex..." value={regex} onChange={handleRegexChange} />
+        </div>
         <div className="buttons">
           <button disabled={level <= 0} className="change-level" type="button" onClick={handlePrevious}>‹</button>
           <div className="submit">
