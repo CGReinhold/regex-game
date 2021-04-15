@@ -14,7 +14,7 @@ export const LEVEL9: ILevel = {
         For example, <code>{'\\w{2}\\W{2}'}</code> would match two alphanumeric characters followed by two non alphanumerics, like <code>ab$*</code>
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level. Note that this time tha match may not need to be perfect.
+        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level.
       </p>
     </>
   ),

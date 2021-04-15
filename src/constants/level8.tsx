@@ -16,7 +16,7 @@ export const LEVEL8: ILevel = {
         Following this, the <code>^program$</code> will only match strings that are exactly <code>program</code> and not strings that contain it inside.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level. Note that this time tha match may not need to be perfect.
+        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level. Notice that this time the match may not need to be perfect.
       </p>
     </>
   ),

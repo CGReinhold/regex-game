@@ -26,8 +26,6 @@ const App = () => {
           setLevel(current => current + 1);
         }, 10)
       }
-    } else {
-      //TODO: wrong regex, show animation and try again.
     }
   }
 

@@ -1,4 +1,5 @@
 import { LEVEL1 } from './level1';
+import { LEVEL10 } from './level10';
 import { LEVEL2 } from './level2';
 import { LEVEL3 } from './level3';
 import { LEVEL4 } from './level4';
@@ -20,4 +21,15 @@ export interface ILevel {
   isNotPerfectMatch?: boolean;
 }
 
-export const LEVELS: ILevel[] = [LEVEL1, LEVEL2, LEVEL3, LEVEL4, LEVEL5, LEVEL6, LEVEL7, LEVEL8, LEVEL9];
+export const LEVELS: ILevel[] = [
+  LEVEL1,
+  LEVEL2,
+  LEVEL3,
+  LEVEL4,
+  LEVEL5,
+  LEVEL6,
+  LEVEL7,
+  LEVEL8,
+  LEVEL9,
+  LEVEL10,
+];
