@@ -2,7 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import './gameLayout.css'
 import character from '../assets/character.png'
-import ladder from '../assets/footprint.png'
+import footprint from '../assets/footprint.png'
+import cash from '../assets/cash.png'
 import { LEVELS } from '../constants/levels';
 import { match } from '../utils/regex';
 
@@ -14,25 +15,31 @@ interface GameLayoutProps {
 const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
   const getLeftPosition = useCallback(() => {
     if (level === 0) return `calc(40%)`;
-    const horizontalIndex = LEVELS[level - 1].items.findIndex(item => item.isRight);
+    const horizontalIndex = level === 0 ? 0 : LEVELS[level - 1].items.findIndex(item => item.isRight);
     return `calc(${20 * horizontalIndex}%)`;
   }, [level]);
 
   const [top, setTop] = useState<string>(`calc(10% - ${(level) * 259}px + 60px)`);
   const [left, setLeft] = useState<string>(getLeftPosition());
   const [newLevel, setNewLevel] = useState<boolean>(false);
+  const [faceRight, setFaceRight] = useState<boolean>(true);
 
   useEffect(() => {
-    if (level > 0) {
-      setTop(`calc(10% - ${(level) * 259}px + 60px)`);
-      setLeft(getLeftPosition());
-      setNewLevel(true);
-    }
+    setTop(`calc(10% - ${(level) * 259}px + 60px)`);
+    setLeft(getLeftPosition());
+    setNewLevel(true);
+    const previousRightIndex = level === 0 ? 0 : LEVELS[level - 1].items.findIndex(i => i.isRight);
+    const currentRightIndex = level === LEVELS.length ? 0 : LEVELS[level].items.findIndex(i => i.isRight);
+    setTimeout(() => {
+      setFaceRight(currentRightIndex > previousRightIndex);
+    }, 3000);
   }, [level, getLeftPosition]);
 
   useEffect(() => {
     setNewLevel(false);
   }, [regex]);
+
+  const characterClass = classNames('regex-character', { 'face-left': !faceRight });
 
   return (
     <div className="game-layout">
@@ -54,9 +61,9 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
                       {item.text}
                     </div>
 
-                    <div className="regex-ladder">
+                    <div className="regex-footprint">
                       {item.isRight && (
-                        <img src={ladder} alt="ladder" />
+                        <img src={footprint} alt="footprint" />
                       )}
                     </div>
                   </div>
@@ -65,7 +72,12 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
             </div>
           );
         })}
-        <div>
+        <div className="last-platform">
+          {level === LEVELS.length && (
+            <div className="cash">
+              <img src={cash} alt="cash" />
+            </div>
+          )}
           <div className="regex-floor"></div>
         </div>
       </div>
@@ -74,7 +86,7 @@ const GameLayout: React.FC<GameLayoutProps> = ({ level, regex }) => {
         <span className="win-label">You won!</span>
       )}
 
-      <div className="regex-character" style={{ left }}>
+      <div className={characterClass} style={{ left }}>
         <img src={character} alt="character" />
       </div>
     </div>
