@@ -5,10 +5,10 @@ export const LEVEL4: ILevel = {
     <>
       <p>
         The <code>*</code> and <code>?</code> are not the only repetition meta characters in <b>regex</b>.
-        We are also able to use <code>+</code>, which in a similar vein matches one or more repetitions of the preciding character, but requires it to exists.
+        We are also able to use <code>+</code>, which in a similar vein matches one or more repetitions of the preceding character, but requires it to exists.
       </p>
       <p>
-        The repetition meta characters can match not only the preciding character but also a group of characters.
+        The repetition meta characters can match not only the preceding character but also a group of characters.
         To create a capture group of characters you can use parenthesis <code>(xyz)</code> to describe a group of characters.
       </p>
       <p>

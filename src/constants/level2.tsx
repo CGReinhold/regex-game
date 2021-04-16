@@ -12,7 +12,7 @@ export const LEVEL2: ILevel = {
         The <code>.</code> (period) meta character, for example, is used to match any character in a string (except a line break).
       </p>
       <p>
-        Another meta characters are the braces, that are used to describe the number o repetitions of the preciding character.
+        Another meta characters are the braces, that are used to describe the number of repetitions of the preceding character.
         You can use <code>{'{n,m}'}</code> to find a match that has at least <b>n</b> but not more than <b>m</b> repetitions of the preceding symbol
       </p>
       <p>
