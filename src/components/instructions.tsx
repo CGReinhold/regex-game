@@ -45,7 +45,7 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
 
   return (
     <div className="instructions">
-      <h1>Regex Raid</h1>
+      <h1>Regex Mistery</h1>
       <div>
         {isMobile && (
           <p className="mobile">
