@@ -60,7 +60,7 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
         ) : (
           <>
             <p>Congratulations, you finished the regex game!</p>
-            <p>The regex journey doesn't end here. Regex also has diferent types of flags that can run queries in different ways and I'd definitely recommend to take a further look on how they work.</p>
+            <p>The regex journey doesn't end here. Regex also has different types of flags that can run queries in different ways and I'd definitely recommend to take a further look on how they work.</p>
             <p>You can find further info on <a href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noreferrer">this repository</a> in which I was heavily inspired.</p>
           </>
         )}

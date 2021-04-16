@@ -9,7 +9,7 @@ export const LEVEL5: ILevel = {
       </p>
       <p>
         You can use this <b>regex</b> <code>[Rr]egex is cool</code> to match both <code>Regex is cool</code> and <code>regex is cool</code>.
-        You could also create a range of lowercase charactes using <code>[a-z]+</code> to match a word, or <code>[a-zA-Z0-9]+</code> to match any group of upper and lowercase letters or digits.
+        You could also create a range of lowercase characters using <code>[a-z]+</code> to match a word, or <code>[a-zA-Z0-9]+</code> to match any group of upper and lowercase letters or digits.
       </p>
       <p>
         One singularity of character sets is that periods (<code>.</code>) inside it means the literal period, and not the regex meta character.

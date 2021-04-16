@@ -4,7 +4,7 @@ export const LEVEL14: ILevel = {
   description: (
     <>
       <p>
-        Similarly with lookbehind, lookahead allows us to match something followed by certain pattern without including it.
+        Similarly to lookbehind, lookahead allows us to match something followed by certain pattern without including it.
         You can use it as <code>(?=)</code>.
       </p>
       <p>
