@@ -11,7 +11,7 @@ export const LEVEL10: ILevel = {
         For example, <code>{'\\D+\\D{3}'}</code> would match a set of non digits followed by three digits, like <code>ABC-123</code>
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level.
+        Try to figure out what is the <b>regex</b> that matches the piece blocking the character to the next level.
       </p>
     </>
   ),

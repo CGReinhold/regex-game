@@ -10,7 +10,10 @@ export const LEVEL12: ILevel = {
         One example of it is the positive lookbehind (<code>{'(?<=)'}</code>) which could be used like <code>{'(?<=\\$)[0-9\\.]*'}</code> to match only number following a dollar sign.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level.
+        When using the lookarounds, the patterns it matches will not be included on the result, that's why the match doesn't need to be perfect on this levels.
+      </p>
+      <p>
+        Try to figure out what is the <b>regex</b> that matches the piece blocking the character to the next level.
       </p>
     </>
   ),

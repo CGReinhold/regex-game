@@ -14,7 +14,7 @@ export const LEVEL11: ILevel = {
         For example, <code>{'\\S+@email.com'}</code> would only match strings starting with a set of non-whitespace characters and ending with <code>@email.com</code>.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level.
+        Try to figure out what is the <b>regex</b> that matches the piece blocking the character to the next level.
       </p>
     </>
   ),

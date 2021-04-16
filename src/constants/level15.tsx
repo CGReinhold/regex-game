@@ -10,7 +10,7 @@ export const LEVEL15: ILevel = {
         You could use this <b>regex</b> <code>\d{2}(?! (p|a)m)</code> to only match pair of numbers that don't come before <code>am</code> or <code>pm</code>
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level.
+        Try to figure out what is the <b>regex</b> that matches the piece blocking the character to the next level.
       </p>
     </>
   ),

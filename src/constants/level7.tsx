@@ -5,7 +5,7 @@ export const LEVEL7: ILevel = {
     <>
       <p>
         Sometimes you may want to create a regex that need to match any of the meta characters.
-        In this cases you might want to use <code>\</code>. With it it will escape the next character, allowing you to match reserved characters
+        In this cases you might want to use <code>\</code>. It will escape the next character, allowing you to match reserved characters
       </p>
       <p>
         As an example, you could use the <code>[a-zA-Z]+\.</code> <b>regex</b> to match words with a period at the end.

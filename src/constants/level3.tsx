@@ -7,14 +7,14 @@ export const LEVEL3: ILevel = {
         Some of the other <b>regex</b> meta characters are <code>*</code> and <code>?</code>.
       </p>
       <p>
-        <code>?</code> is used to match when the preciding character is optional, while <code>*</code> matches when it is optional or repeated `n` times.
+        <code>?</code> is used to match when the preciding character is optional, while <code>*</code> matches when it is optional or repeated "n" times.
       </p>
       <p>
-        Both <code>test@gmail.com</code>, <code>test1@gmail.com</code> and <code>test11@gmail.com</code> matches the following <b>regex</b>: <code>test1*@gmail.com</code>, because the 1 is optional and can be repeated.
-        However, only the first two match the <b>regex</b> <code>test1?@gmail.com</code>. That's because in this <b>regex</b> the number 1 can be repeated only once.
+        All <code>test@gmail.com</code>, <code>test1@gmail.com</code> and <code>test11@gmail.com</code> matches the following <b>regex</b>: <code>test1*@gmail.com</code>, because the 1 is optional and can be repeated many times.
+        However, only the first two will match the <b>regex</b> <code>test1?@gmail.com</code>. That's because in this <b>regex</b> the number 1 can be repeated only once.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that would perfectly match the piece blocking the character to the next level.
+        Try to figure out what is the <b>regex</b> that would perfectly match all the pieces blocking the character to the next level.
       </p>
     </>
   ),

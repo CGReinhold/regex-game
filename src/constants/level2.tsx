@@ -9,10 +9,10 @@ export const LEVEL2: ILevel = {
         Some meta characters have a special meaning and are written inside square brackets.
       </p>
       <p>
-        The <code>.</code> (period) meta character, for example, is used to match any character (except a line break).
+        The <code>.</code> (period) meta character, for example, is used to match any character in a string (except a line break).
       </p>
       <p>
-        Another meta characters are the braces, that are used to describe the number o repetitions of a character.
+        Another meta characters are the braces, that are used to describe the number o repetitions of the preciding character.
         You can use <code>{'{n,m}'}</code> to find a match that has at least <b>n</b> but not more than <b>m</b> repetitions of the preceding symbol
       </p>
       <p>

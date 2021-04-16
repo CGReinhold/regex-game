@@ -19,7 +19,7 @@ export const LEVEL4: ILevel = {
         For example, this <b>regex</b> <code>.+@(gmail|fastmail).com</code> would match both <code>test@gmail.com</code> and <code>test@fastmail.com</code>, but not <code>@gmail.com</code> or <code>test@hotmail.com</code>.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that would perfectly match the piece blocking the character to the next level.
+        Try to figure out what is the <b>regex</b> that would perfectly match all the pieces blocking the character to the next level.
       </p>
     </>
   ),

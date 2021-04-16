@@ -4,7 +4,7 @@ export const LEVEL8: ILevel = {
   description: (
     <>
       <p>
-        You may have noticed that for each level by now you were supposed to get a perfect match.
+        You may have noticed that for each level until now you were supposed to get a perfect match. We also had some specific characters always visible on the input.
         However, <b>regex</b> will also match substrings, so <code>Program</code> will find a match in both <code>Program</code> and <code>Programming</code> (which has the substring in it).
       </p>
       <p>
@@ -16,7 +16,7 @@ export const LEVEL8: ILevel = {
         Following this, the <code>^program$</code> will only match strings that are exactly <code>program</code> and not strings that contain it inside.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level. Notice that this time the match may not need to be perfect.
+        Try to figure out what is the <b>regex</b> that matches all the pieces blocking the character to the next level. Notice that this time the match may not need to be perfect.
       </p>
     </>
   ),

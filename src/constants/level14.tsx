@@ -12,7 +12,7 @@ export const LEVEL14: ILevel = {
         Remember that this will only match the numbers, and not the percent sign.
       </p>
       <p>
-        Try to figure out what is the <b>regex</b> that match the piece blocking the character to the next level.
+        Try to figure out what is the <b>regex</b> that matches the piece blocking the character to the next level.
       </p>
     </>
   ),
