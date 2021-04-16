@@ -3,6 +3,8 @@ import { LEVEL10 } from './level10';
 import { LEVEL11 } from './level11';
 import { LEVEL12 } from './level12';
 import { LEVEL13 } from './level13';
+import { LEVEL14 } from './level14';
+import { LEVEL15 } from './level15';
 import { LEVEL2 } from './level2';
 import { LEVEL3 } from './level3';
 import { LEVEL4 } from './level4';
@@ -39,4 +41,6 @@ export const LEVELS: ILevel[] = [
   LEVEL11,
   LEVEL12,
   LEVEL13,
+  LEVEL14,
+  LEVEL15,
 ];

@@ -4,7 +4,7 @@ export const LEVEL13: ILevel = {
   description: (
     <>
       <p>
-        The positive lookahead has also a negation alternative which can be used replacing the equal sign to the exclamation sign <code>(?!)</code>.
+        The positive lookbehind has also a negation alternative which can be used replacing the equal sign to the exclamation sign <code>{'(?<!)'}</code>.
       </p>
       <p>
         This expression will match values not starting with a certain pattern, so if we use this <b>regex</b> <code>{'(?<!\\Name: )[0-9\\.]+'}</code> it will only match digits that don't have a preceding <code>Name: </code> label.
