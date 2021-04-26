@@ -11,26 +11,32 @@ const LAST_LEVEL = LEVELS.length;
 const App = () => {
   const [level, setLevel] = useState<number>(0);
   const [regex, setRegex] = useState<string>('');
+  const [regexError, setRegexError] = useState<string>('');
   const [resultShouldInclude, setResultShouldInclude] = useState<boolean>(false);
   const { items, isNotPerfectMatch, shouldInclude } = useLevel(level);
 
   const handleRegexSubmit = (regex: string) => {
     setRegex(regex);
     setResultShouldInclude(false);
+    setRegexError('');
 
-    const rightTexts = items.filter(item => item.isRight)?.map(item => item.text);
-    const rightCount = items.filter(item => match(regex, item.text, isNotPerfectMatch)).length;
-    const isRegexRight = rightTexts.every(text =>  match(regex, text, isNotPerfectMatch)) && rightCount === rightTexts.length;
+    try {
+      const rightTexts = items.filter(item => item.isRight)?.map(item => item.text);
+      const rightCount = items.filter(item => match(regex, item.text, isNotPerfectMatch)).length;
+      const isRegexRight = rightTexts.every(text =>  match(regex, text, isNotPerfectMatch)) && rightCount === rightTexts.length;
 
-    if (isRegexRight) {
-      const includesRequiredValues = !shouldInclude || shouldInclude.every(char => regex.includes(char));
-      if (level < LAST_LEVEL && includesRequiredValues) {
-        setTimeout(() => {
-          setLevel(current => current + 1);
-        }, 10)
-      } else {
-        setResultShouldInclude(true);
+      if (isRegexRight) {
+        const includesRequiredValues = !shouldInclude || shouldInclude.every(char => regex.includes(char));
+        if (level < LAST_LEVEL && includesRequiredValues) {
+          setTimeout(() => {
+            setLevel(current => current + 1);
+          }, 10)
+        } else {
+          setResultShouldInclude(true);
+        }
       }
+    } catch (err) {
+      setRegexError(err.message);
     }
   }
 
@@ -42,10 +48,11 @@ const App = () => {
           resultShouldInclude={resultShouldInclude}
           onSubmit={handleRegexSubmit}
           onChangeLevel={setLevel}
+          regexError={regexError}
         />
       </div>
       <div className="box game-box">
-        <GameLayout level={level} regex={regex} />
+        <GameLayout level={level} regex={!regexError ? regex : ''} />
       </div>
     </div>
   );

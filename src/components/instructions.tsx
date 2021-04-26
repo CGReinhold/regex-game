@@ -10,9 +10,10 @@ interface LevelInstructionsProps {
   onSubmit(regex: string): void;
   onChangeLevel(newLevel: number): void;
   resultShouldInclude: boolean;
+  regexError: string;
 }
 
-const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShouldInclude, onSubmit, onChangeLevel }) => {
+const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, regexError, resultShouldInclude, onSubmit, onChangeLevel }) => {
   const [regex, setRegex] = useState<string>('');
   const { description, solution, isNotPerfectMatch } = useLevel(level);
   
@@ -67,6 +68,11 @@ const LevelInstructions: React.FC<LevelInstructionsProps> = ({ level, resultShou
         {resultShouldInclude && (
           <p className="try-again">
             You found a perfect solution, but try using something you learned on this level instead.
+          </p>
+        )}
+        {regexError && (
+          <p className="try-again">
+            There is an error with your regex: {regexError}
           </p>
         )}
       </div>
