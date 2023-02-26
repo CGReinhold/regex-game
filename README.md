@@ -6,6 +6,8 @@ Try to figure out the valid regex necessary to advance to next levels and reach 
 
 Each level exposes a different regex challenge.
 
+[You can try the live version here](https://regex-mistery.cgreinhold.dev/)
+
 ![Regex Mistery print](src/assets/game-screen.PNG)
 
 
