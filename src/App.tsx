@@ -36,7 +36,8 @@ const App = () => {
         }
       }
     } catch (err) {
-      setRegexError(err.message);
+      const error = err instanceof Error ? err : new Error(String(err));
+      setRegexError(error.message);
     }
   }
 
