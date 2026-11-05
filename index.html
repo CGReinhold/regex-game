@@ -1,15 +1,63 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Regex game" />
+    <meta name="description" content="Regex Mistery - Aprenda regex jogando" />
+    <link rel="icon" href="favicon.ico" />
     <title>Regex Mistery</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/index.tsx"></script>
+    <noscript>Você precisa habilitar o JavaScript para rodar este app.</noscript>
+    <div id="root">
+      <div class="game">
+        <div class="box instruction-box">
+          <div class="instructions">
+            <h1>Regex Mistery</h1>
+            <div>
+              <p class="mobile" id="mobile-warning" hidden>
+                Este app pode não funcionar corretamente em dispositivos móveis. Tente jogar em um computador para uma melhor experiência.
+              </p>
+              <div id="instructions-content"></div>
+            </div>
+            <form id="regex-form" novalidate>
+              <div class="input" id="input-wrapper"><input
+                  id="regex-input"
+                  type="text"
+                  placeholder="Sua regex..."
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                /></div>
+              <div class="buttons">
+                <button disabled class="change-level" id="previous-level" type="button">‹</button>
+                <div class="submit">
+                  <button type="submit">Tentar!</button>
+                </div>
+                <button class="change-level" id="next-level" type="button">›</button>
+              </div>
+              <button class="answer" id="answer-button" type="button">Me dê a solução!</button>
+            </form>
+            <div class="links">
+              <a href="https://cgreinhold.dev">cgreinhold.dev</a>
+              •
+              <a href="https://github.com/CGReinhold/regex-game">Github</a>
+            </div>
+          </div>
+        </div>
+        <div class="box game-box">
+          <div class="game-layout">
+            <div class="game-platform" id="game-platform"></div>
+            <span class="win-label" id="win-label" hidden>Você venceu!</span>
+            <div class="regex-character" id="character">
+              <img src="assets/character.png" alt="personagem" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

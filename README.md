@@ -1,14 +1,26 @@
 # Regex Mistery
 
-This is a game created to teach some regex concepts.
+Jogo criado para ensinar alguns conceitos de expressões regulares.
 
-Try to figure out the valid regex necessary to advance to next levels and reach to the end.
+Tente descobrir qual é a regex necessária para avançar de nível e chegar até o fim.
 
-Each level exposes a different regex challenge.
+Cada nível apresenta um desafio diferente de regex.
 
-[You can try the live version here](https://regex-mistery.cgreinhold.dev/)
+[Você pode testar a versão online aqui](https://regex-mistery.cgreinhold.dev/)
 
-![Regex Mistery print](src/assets/game-screen.PNG)
+![Captura de tela do Regex Mistery](assets/game-screen.PNG)
 
+## Como usar
 
-If you find any bug or problem, please open a issue, or help me evolve the game creating a PR.
+Abra `index.html` diretamente no navegador. Não é necessário instalar nada nem
+rodar um servidor.
+
+Os arquivos da página são:
+
+- `index.html` — estrutura da página
+- `style.css` — estilos
+- `script.js` — níveis, lógica do jogo e interações
+- `assets/` — imagens usadas pelo jogo
+
+Se você encontrar algum bug ou problema, abra uma issue ou ajude a evoluir o
+jogo enviando um PR.
